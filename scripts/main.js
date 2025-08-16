@@ -55,6 +55,34 @@ nextButton.addEventListener('click', ()=> {
         dots[counter].classList.add('activeDots')
 })
 
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight') {
+        for (let k = 0; k < images.length; k++) {
+            images[k].classList.remove('activeImage')
+            dots[k].classList.remove('activeDots')
+        }
+        counter++
+
+        if (counter >= images.length) {
+            counter = 0
+        }
+        images[counter].classList.add('activeImage')
+        dots[counter].classList.add('activeDots')
+    } else if (event.key === 'ArrowLeft') {
+        for (let k = 0; k < images.length; k++) {
+            images[k].classList.remove('activeImage')
+            dots[k].classList.remove('activeDots')
+        }
+        counter--
+
+        if (counter < 0) {
+            counter = images.length - 1
+        }
+        images[counter].classList.add('activeImage')
+        dots[counter].classList.add('activeDots')
+    }
+})
+
 function autonext () {
         for (let k = 0; k < images.length; k++) {
             images[k].classList.remove('activeImage')
