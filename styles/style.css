@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+
+}
+
+.images {
+    width: 300px;
+    height: 300px;
+    display: none;
+}
+
+.activeImage {
+    display: flex;
+}
+
+.nav {
+    font-size: 75px;
+    cursor: pointer;
+}
+
+.container-dots {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    gap: 20px;
+}
+
+.dots:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.activeDots {
+    background-color: gray;
+    border-radius: 50px;
+    width: 20px;
+    height: auto;
+    text-align: center;
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #7DA6B2;
+}
+
+.start {
+    font-size: 42px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.stop {
+    font-size: 42px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.active {
+    background-color: green;
+}
+.stopped {
+    background-color: red;
+}
+
+.prevSlide, .nextSlide {
+    user-select: none;
+}
+
+.prevSlide:hover {
+    transform: scale(1.1);
+}
+
+.nextSlide:hover {
+    transform: scale(1.1);
+}
+
